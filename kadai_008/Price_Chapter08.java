@@ -3,7 +3,7 @@ package text.section_05;
 public class Price_Chapter08 {
 	public static void main(String[] args) {
 		int userAge = 30;
-		int serviceCost;
+		int serviceCost = 500;
 		
 		serviceCost = switch(userAge) {
 		case 10 -> 1000;
