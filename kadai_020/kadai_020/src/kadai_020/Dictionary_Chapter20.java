@@ -2,7 +2,7 @@ package kadai_020;
 import java.util.HashMap;
 
 public class Dictionary_Chapter20 {
-	public  void jisyo() {
+	public  void jisyo(String[] search) {
 		
 		
 		HashMap<String,String> jisyo=new HashMap<String,String>();
@@ -17,18 +17,14 @@ public class Dictionary_Chapter20 {
 		jisyo.put("muscat","マスカット");
 		jisyo.put("cherry","さくらんぼ");
 		
-		for (String key:jisyo.keySet()) {
-			System.out.println(jisyo.get(key));
-		}
-		
-		
-		if(jisyo.get("orange")==null) {
-			System.out.println("orangeは辞書に存在しません");
-		}else {
-			System.out.println("orangeの意味は"+jisyo.get("orange"));
+		for (String searchValue:search) {
+			if(jisyo.get(searchValue)==null) {
+				System.out.println(searchValue+"は辞書に存在しません");
+			}else {
+				System.out.println(searchValue+"の意味は"+jisyo.get(searchValue));	
+			}
 		}
 		
 	}
-	
-
 }
+
