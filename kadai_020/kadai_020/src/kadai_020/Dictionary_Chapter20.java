@@ -24,7 +24,6 @@ public class Dictionary_Chapter20 {
 				System.out.println(searchValue+"の意味は"+jisyo.get(searchValue));	
 			}
 		}
-		
 	}
 }
 
