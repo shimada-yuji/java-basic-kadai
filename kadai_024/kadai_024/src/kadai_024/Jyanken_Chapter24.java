@@ -13,16 +13,12 @@ public class Jyanken_Chapter24 {
 		Scanner scanner=new Scanner(System.in);
 		String input=scanner.nextLine();
 		System.out.println(input);
-		scanner.close();
-		if(input.equals("r")) {
-			return input;
-		}else if(input.equals("s")){
-			return input;
-		}else if(input.equals("p")){
+		if(input.equals("r")||input.equals("s")||input.equals("p")) {
+			scanner.close();
 			return input;
 		}else {
 			System.out.println(input+"はエラーです");
-			return input;
+			return getMyChoice();
 		}
 	}
 	public String getRandom() {
@@ -37,7 +33,7 @@ public class Jyanken_Chapter24 {
 		jyanken.put("p","パー");
 		String myHand2=jyanken.get(myHand);
 		String yourHand=getRandom();
-		System.out.println("自分の手は"+myHand2+",対戦相手の手は"+getRandom());
+		System.out.println("自分の手は"+myHand2+",対戦相手の手は"+yourHand);
 		if(myHand2.equals(yourHand)) {
 			System.out.println("あいこです");
 		}else if(myHand2.equals("グー")&&(yourHand.equals("チョキ"))) {
